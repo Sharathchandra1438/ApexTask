@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Portfolio</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">WebDev Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#todo">To-Do</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <section class="section contact-form" id="contact">
+            <h2>Contact Form</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error-message" id="nameError">Name is required</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="emailError">Please enter a valid email address</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="Enter your message here..."></textarea>
+                    <div class="error-message" id="messageError">Message is required</div>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+                <div class="success-message" id="successMessage">Thank you! Your message has been sent successfully.</div>
+            </form>
+        </section>
+        <section class="section todo-section" id="todo">
+            <h2>Dynamic To-Do List</h2>
+            <div class="todo-input-container">
+                <input type="text" class="todo-input" id="todoInput" placeholder="Add a new task...">
+                <button class="add-btn" onclick="addTodo()">Add Task</button>
+            </div>
+            <ul class="todo-list" id="todoList">
+            </ul>
+            <div style="margin-top: 1rem; text-align: center; color: #718096; font-size: 0.9rem;">
+                <span id="todoCount">0</span> tasks remaining
+            </div>
+        </section>
+        <section class="section info-section" id="about">
+            <h2>Project Features</h2>
+            <p>This webpage demonstrates intermediate HTML, CSS, and JavaScript skills with modern web development practices.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Modern Design</h3>
+                    <p>Clean, professional UI with glassmorphism effects, gradients, and smooth animations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Responsive Layout</h3>
+                    <p>Flexbox navigation and CSS Grid layout that adapts to all screen sizes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Form Validation</h3>
+                    <p>Real-time JavaScript validation for required fields and email format checking.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Dynamic Functionality</h3>
+                    <p>Interactive to-do list with DOM manipulation for adding, completing, and deleting tasks.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts2.js"></script>
+</body>
+</html>
